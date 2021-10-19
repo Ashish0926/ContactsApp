@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -33,6 +34,10 @@ android {
     }
     packagingOptions {
         exclude 'META-INF/atomicfu.kotlin_module'
+    }
+    buildFeatures{
+        dataBinding = true
+        viewBinding = true
     }
 }
 
@@ -73,6 +78,7 @@ dependencies {
     implementation 'com.github.imtuann:FloatingActionButtonExpandable:1.1.2'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
+    kapt "com.android.databinding:compiler:3.4.0"
     // image picker
     implementation 'com.github.Drjacky:ImagePicker:2.1.13'
 }

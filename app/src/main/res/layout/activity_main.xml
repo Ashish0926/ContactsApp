@@ -47,7 +47,7 @@
             app:fab_content="Add a new contact"
             app:fab_text_size="17sp"
             app:fab_bg_color="@color/primaryColor"
-            app:fab_duration="200"/>
+            app:fab_duration="300"/>
 
     </RelativeLayout>
 
