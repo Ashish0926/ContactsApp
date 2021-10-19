@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="15dp"
+    app:cardElevation="12dp"
+    app:cardCornerRadius="10dp"
+    android:paddingVertical="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/white">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/user"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/userImg"
+            android:paddingStart="20dp"
+            android:paddingEnd="10dp"
+            android:layout_toStartOf="@id/deleteButton"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/contactName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="Contact Name"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/ubuntu_regular"
+                android:text="contact@gmail.com"
+                android:textColor="@color/grey"/>
+
+            <TextView
+                android:id="@+id/phoneNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="12dp"
+                android:textSize="15sp"
+                android:text="1234567890"
+                android:textColor="@color/grey"/>
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:id="@+id/deleteButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            app:tint="@color/black"
+            android:src="@drawable/ic_delete"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
